@@ -39,27 +39,27 @@ class BasicPageLayoutTest extends \PHPUnit_Framework_TestCase
         }
     }
     
-    public function testLogoHeightIs80px()
+    public function testLogoHeightIs100px()
     {
         $this->webDriver->get($this->url);
         try {
             $gambar = $this->webDriver->findElement(
                 WebDriverBy::cssSelector('.uk-navbar-brand > img:nth-child(1)')
             );
-            $this->assertEquals('80px', $gambar->getCSSValue('height'));
+            $this->assertEquals('100px', $gambar->getCSSValue('height'));
         } catch (NFacebook\WebDriver\Exception\NoSuchElementException $e) {
             $this->fail('Kmk logo not found');
         }
     }
 
-    public function testLogoWidhtIs80px()
+    public function testLogoWidhtIs100px()
     {
         $this->webDriver->get($this->url);
         try {
             $gambar = $this->webDriver->findElement(
                 WebDriverBy::cssSelector('.uk-navbar-brand > img:nth-child(1)')
             );
-            $this->assertEquals('80px', $gambar->getCSSValue('width'));
+            $this->assertEquals('100px', $gambar->getCSSValue('width'));
         } catch (Facebook\WebDriver\Exception\NoSuchElementException $e) {
             $this->fail('Kmk logo not found');
         }
