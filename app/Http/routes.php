@@ -15,5 +15,5 @@ Route::get( '/', ['as' => 'backslash', 'uses' => 'HomeController@index']);
 
 Route::get('/feedback/{slug}/new', function($slug) {
 		$page_title = "Peer Feedback For ".ucfirst($slug);
-    return view('new', compact('page_title'));
+    return view('feedback/newxhp', compact('page_title'));
 });
